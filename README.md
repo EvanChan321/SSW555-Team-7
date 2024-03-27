@@ -7,7 +7,6 @@ This is the code for Team 7 (Team Motion). Our goal is to create a lie detection
   ```
   cd client
   npm run dev
-
   ```
 
 # Backend
