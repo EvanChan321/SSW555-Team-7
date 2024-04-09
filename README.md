@@ -1,19 +1,18 @@
-# BCI Project
+# Lie Detection Website
+This is the code for Team 7 (Team Motion). Our goal is to create a lie detection website. Users will upload EEG data as a .npy file and the website will use a machine learning algorithm to determine whether someone is lying based on the data that was uploaded. The website will display the result along with a confidence index of its evaluation. 
+ 
 
+# Frontend
+  ## Running the Frontend 
+  ```
+  cd client
+  npm run dev
+  ```
 
-## Data Preprocessing (Matlab code)
+# Backend
+  * _Backend Team add stuff here_
 
-You can download it from this Google Drive link: [https://drive.google.com/drive/folders/1ykR-mn4d4KfFeeNrfR6UdtebsNRY8PU2?usp=sharing]. 
-Please download the data and place it in your data_path at "./data."
-
-# Getting Started
-  * You can run the code on your Colab or Kaggle (If your model node need GPU)
-    * [1.BCI Data Description](https://colab.research.google.com/drive/1gwIGFoSsRLu9-X3Z79xrPMKiqqE_XeMu#scrollTo=366c60d7)
-    * [2.BCI EEG classification](https://colab.research.google.com/drive/1E4kb9iRZHc251SXFANzdpfLBfWzw9L2G)
-
-# Other EEG featuers extraction methods
-- [Matlab packages](#Matlab packages)
-
+# Machine Learning Model 
 ## Method
 
 * Classification (Machine learning methods, Scikit-learn[https://scikit-learn.org/stable/])
@@ -27,12 +26,11 @@ Please download the data and place it in your data_path at "./data."
 
 Name | Epochs | ACC | Precision | Recall | 
 ---  |:---------:|:---------:|:---------:|:---------:
-Transformer | 500 | Best run:54.69% | - | - | -
+Transformer | 500 | Best run: 54.69% | - | - | -
 DNN | 300 | 53.81% | - | - | -
-Classification | - |  ~40% for subject, ~ 35% for cross subject | - | - | -
+Classification | 50 |  Best run: 50.99% | - | - | -
 Confomer | - |  - | - | - | -
 RNN | - | ~25% for cross subject  | - | - | -
-
 
 ## References:
 - [2020 International brain–computer interface competition: A review](https://www.frontiersin.org/articles/10.3389/fnhum.2022.898300/full)
