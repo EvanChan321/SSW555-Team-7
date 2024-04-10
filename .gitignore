@@ -1,0 +1,42 @@
+# System files
+.DS_Store
+
+# Node modules
+node_modules/
+
+# NPM logs
+npm-debug.log*
+
+# Python virtual environment
+myenv/
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Python distribution
+*.egg-info/
+dist/
+build/
+
+# Scipy
+*.mat
+
+# TensorFlow
+*.ckpt
+
+# PyTorch
+*.pt
+*.pth
+
+# Environment variables
+.env
+
+# IDE specific files
+.idea/
+.vscode/
+
+# Logs
+*.log

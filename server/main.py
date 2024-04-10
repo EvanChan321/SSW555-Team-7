@@ -6,6 +6,7 @@ import os
 import argparse
 from torch.nn.utils.rnn import pad_sequence
 
+#This will do most of the same thing as what the juiper notebook does but differently
 def train_eval(data_path, n_epoch):
     x_train_tensor, y_train_tensor, x_test_tensor, y_test_tensor = data_loader(data_path)
 

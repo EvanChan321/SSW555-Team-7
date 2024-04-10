@@ -23,12 +23,13 @@ This is the code for Team 7 (Team Motion). Our goal is to create a lie detection
 
 
 ## Model Performance:
+Focus on classification
 
 Name | Epochs | ACC | Precision | Recall | 
 ---  |:---------:|:---------:|:---------:|:---------:
 Transformer | 500 | Best run: 54.69% | - | - | -
 DNN | 300 | 53.81% | - | - | -
-Classification | 50 |  Best run: 50.99% | - | - | -
+Classification | 50 |  Best run: 51.70% | - | - | -
 Confomer | - |  - | - | - | -
 RNN | - | ~25% for cross subject  | - | - | -
 
