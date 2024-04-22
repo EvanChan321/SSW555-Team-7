@@ -40,3 +40,12 @@ build/
 
 # Logs
 *.log
+
+.idea
+
+# Jupyter Notebook
+testData*
+testLabel*
+
+# all npy files
+*.npy

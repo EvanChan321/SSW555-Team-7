@@ -3,23 +3,29 @@ import axios from "axios";
 import ResultsDisplay from "./ResultsDisplay";
 
 const FileUploadForm = () => {
-    const [file, setFile] = useState(null);
+    const [testData, setTestData] = useState(null);
+    const [testLabel, setTestLabel] = useState(null);
     const [results, setResults] = useState("");
     const [isLoading, setIsLoading] = useState(false);
 
-    const handleFileChange = (event) => {
-        setFile(event.target.files[0]);
+    const handleTestDataChange = (event) => {
+        setTestData(event.target.files[0]);
+    };
+
+    const handleTestLabelChange = (event) => {
+        setTestLabel(event.target.files[0]);
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        if (!file) {
-            alert("Please upload a file first.");
+        if (!testData || !testLabel) {
+            alert("Please upload both data and label files.");
             return;
         }
 
         const formData = new FormData();
-        formData.append("file", file);
+        formData.append("testData", testData);
+        formData.append("testLabel", testLabel);
 
         setIsLoading(true);
         try {
@@ -34,7 +40,7 @@ const FileUploadForm = () => {
             );
             setResults(response.data.inferenceResult);
         } catch (error) {
-            console.error("Error uploading file:", error);
+            console.error("Error uploading files:", error);
             alert("Failed to process data");
         }
         setIsLoading(false);
@@ -43,7 +49,18 @@ const FileUploadForm = () => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <input type="file" onChange={handleFileChange} />
+                <label htmlFor="testData">Upload Test Data:</label>
+                <input
+                    id="testData"
+                    type="file"
+                    onChange={handleTestDataChange}
+                />
+                <label htmlFor="testLabel">Upload Test Labels:</label>
+                <input
+                    id="testLabel"
+                    type="file"
+                    onChange={handleTestLabelChange}
+                />
                 <button type="submit" disabled={isLoading}>
                     {isLoading ? "Processing..." : "Process Data"}
                 </button>
