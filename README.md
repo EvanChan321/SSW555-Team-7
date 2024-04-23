@@ -1,20 +1,15 @@
 # Lie Detection Website
 This is the code for Team 7 (Team Motion). Our goal is to create a lie detection website. Users will upload EEG data as a .npy file and the website will use a machine learning algorithm to determine whether someone is lying based on the data that was uploaded. The website will display the result along with a confidence index of its evaluation. 
  
-
-# Frontend
-  ## Running the Frontend 
+# Running the App 
+Make sure you are in the client folder when you run the app.
   ```
-  cd client
   npm run dev
   ```
-
-# Backend
-  * _Backend Team add stuff here_
-
 # Machine Learning Model 
-## Method
 
+## Method
+Model is made using pytorch.
 * Classification (Machine learning methods, Scikit-learn[https://scikit-learn.org/stable/])
 * Classification (Simple Autoencoder model)
 
