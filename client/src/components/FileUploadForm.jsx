@@ -49,21 +49,23 @@ const FileUploadForm = () => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="testData">Upload Test Data:</label>
+                <label htmlFor="testData">Upload Test Data: </label>
                 <input
                     id="testData"
                     type="file"
                     onChange={handleTestDataChange}
                 />
-                <label htmlFor="testLabel">Upload Test Labels:</label>
+                <label htmlFor="testLabel">Upload Test Labels: </label>
                 <input
                     id="testLabel"
                     type="file"
                     onChange={handleTestLabelChange}
                 />
-                <button type="submit" disabled={isLoading}>
-                    {isLoading ? "Processing..." : "Process Data"}
-                </button>
+                <div>
+                    <button type="submit" disabled={isLoading}>
+                        {isLoading ? "Processing..." : "Process Data"}
+                    </button>
+                </div>
             </form>
 
             {results && <ResultsDisplay results={results} />}
